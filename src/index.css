@@ -63,6 +63,7 @@ a {
 .site-shell {
   position: relative;
   display: grid;
+  width: 100%;
   min-height: 100vh;
   min-height: 100svh;
   place-items: start center;
@@ -95,7 +96,11 @@ a {
 }
 .link-card {
   position: relative;
-  width: min(100%, 470px);
+  width: 100%;
+  max-width: 470px;
+  min-width: 0;
+  margin-inline: auto;
+  justify-self: center;
   overflow: visible;
   border: 1px solid rgb(23 26 25 / 7%);
   border-radius: 34px;
@@ -516,8 +521,12 @@ a {
 @media (max-width: 480px) {
   .site-shell {
     padding: 8px;
+    overflow-x: clip;
   }
   .link-card {
+    width: 100%;
+    max-width: calc(100vw - 16px);
+    margin-inline: auto;
     border-radius: 27px;
   }
   .profile-header {
