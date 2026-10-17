@@ -5,6 +5,9 @@ import {
   useRef,
   useState,
 } from "react";
+
+import ReactPlayer from "react-player";
+
 import {
   ChevronDown,
   Clock3,
@@ -141,6 +144,17 @@ function Header() {
         Informação e cuidado mais perto de você. Encontre serviços, documentos e
         canais da unidade.
       </p>
+     <div className="video-player">
+
+      <ReactPlayer
+        src="https://www.youtube.com/watch?v=-xHRwD0hux4"
+        controls
+        width="100%"
+        height="100%"
+        
+        style={{ aspectRatio: "16 / 9" }}
+        />
+      </div>
       <section className="opening-hours" aria-labelledby="opening-hours-title">
         <div className="opening-hours__icon" aria-hidden="true">
           <Clock3 />
